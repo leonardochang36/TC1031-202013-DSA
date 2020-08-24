@@ -33,6 +33,18 @@ int fibonacci_v2(int n, map<int, int> &cache)
     return val;
 }
 
+int fibonacci_iter(int n)
+{
+    int a = 0, b = 1, fib = 0;
+    for (int i = 0; i < n-1; i++)
+    {
+        fib = a + b;
+        a = b;
+        b = fib;
+    }
+    return fib;    
+}
+
 int main()
 {
     int ans, nth;
@@ -53,6 +65,13 @@ int main()
     STOP_TIMING(t2);
     cout << ans2 << endl;
     SHOW_TIMING(t2, "Fibonacci version 2");
+
+    DECLARE_TIMING(t3);
+    START_TIMING(t3);
+    int ans3 = fibonacci_iter(nth);
+    STOP_TIMING(t3);
+    cout << ans3 << endl;
+    SHOW_TIMING(t3, "Fibonacci version iter");
 
     return 0;
 }
