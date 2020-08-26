@@ -35,14 +35,14 @@ int fibonacci_v2(int n, map<int, int> &cache)
 
 int fibonacci_iter(int n)
 {
-    int a = 0, b = 1, fib = 0;
-    for (int i = 0; i < n-1; i++)
+    int a = 0, b = 1, fib = 0; 
+    for (int i = 0; i < n-1; i++)  
     {
-        fib = a + b;
-        a = b;
-        b = fib;
+        fib = a + b; // c1 O(1)
+        a = b;       // c2 O(1)
+        b = fib;     // c3 O(1)
     }
-    return fib;    
+    return fib;
 }
 
 int main()
@@ -75,3 +75,4 @@ int main()
 
     return 0;
 }
+
