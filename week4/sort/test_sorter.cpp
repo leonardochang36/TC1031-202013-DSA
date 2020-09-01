@@ -18,38 +18,55 @@ void print_vector(vector<T> arr, int N)
     cout << endl;
 }
 
+template <typename T>
+void compare_vectors(vector<T> a, vector<T> b, string message = "")
+{
+    cout << message << " ";
+    // check if equal
+    if (a == b)
+        cout << "CONGRATS, your implementation is correct!" << endl;
+    else
+        cout << "Ops, sorry cowboy (cowgirl), it seems that something is still missing in your implementation" << endl;
+}
+
+
 int main()
 {
     // generate a random vector array of float
-    int count = 100000;
+    int count = 10000;
     cout << "ARRAY SIZE: " << count << endl;
     vector<float> arr_f;
     for (size_t i = 0; i < count; i++)
     {
         arr_f.push_back((float)rand() / RAND_MAX);
     }
-    vector<float> arr_s(arr_f);
+    vector<float> arr_1(arr_f);
+    vector<float> arr_2(arr_f);
     
-    // create instance of SelectionSort
+    // get a baseline using std::sort
     DECLARE_TIMING(t);
     START_TIMING(t);
-    SelectionSort<float> selsort;
-    selsort.sort(arr_f);
+    std::sort(arr_f.begin(), arr_f.end());
     STOP_TIMING(t);
-    SHOW_TIMING(t, "SelectionSort");
+    SHOW_TIMING(t, "std::sort");
 
-    // use std::sort
+    // create instance of SelectionSort
     DECLARE_TIMING(t1);
     START_TIMING(t1);
-    std::sort(arr_s.begin(), arr_s.end());
+    SelectionSort<float> selsort;
+    selsort.sort(arr_1);
     STOP_TIMING(t1);
-    SHOW_TIMING(t1, "std::sort");
+    compare_vectors(arr_f, arr_1, "Selection sort");
+    SHOW_TIMING(t1, "SelectionSort:");
 
-    // check if equal
-    if (arr_f == arr_s)
-        cout << "CONGRATS, your implementation is correct!" << endl;
-    else
-        cout << "Ops, sorry cowboy (cowgirl), it seems that something is still missing in your implementation" << endl;
+    // create instance of BubbleSort
+    DECLARE_TIMING(t2);
+    START_TIMING(t2);
+    BubbleSort<float> bubsort;
+    bubsort.sort(arr_2);
+    STOP_TIMING(t2);
+    compare_vectors(arr_f, arr_2, "Bubble sort:");
+    SHOW_TIMING(t2, "BubbleSort");
     
     return 0;
 }
