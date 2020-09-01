@@ -32,9 +32,11 @@ void compare_vectors(vector<T> a, vector<T> b, string message = "")
 
 int main()
 {
-    // generate a random vector array of float
-    int count = 10000;
-    cout << "ARRAY SIZE: " << count << endl;
+    int count;
+    cout << "Enter array size: ";
+    cin >> count;
+
+    // generate a random vector array of float of size count
     vector<float> arr_f;
     for (size_t i = 0; i < count; i++)
     {
