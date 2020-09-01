@@ -9,7 +9,7 @@ using namespace std;
 
 
 template <typename T>
-void print_vector(vector<T> arr, int N)
+void print_vector(vector<T> arr, int N = 10)
 {
     for (size_t i = 0; i < arr.size() && i < N; i++)
     {
@@ -42,6 +42,8 @@ int main()
     {
         arr_f.push_back((float)rand() / RAND_MAX);
     }
+
+    // create copies of original vector to be sorted
     vector<float> arr_1(arr_f);
     vector<float> arr_2(arr_f);
     
