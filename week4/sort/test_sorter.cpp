@@ -21,7 +21,7 @@ void print_vector(vector<T> arr, int N)
 int main()
 {
     // generate a random vector array of float
-    int count = 10000;
+    int count = 100000;
     cout << "ARRAY SIZE: " << count << endl;
     vector<float> arr_f;
     for (size_t i = 0; i < count; i++)
