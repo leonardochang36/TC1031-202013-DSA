@@ -70,5 +70,64 @@ class BubbleSort : public Sorter<T>
     };
 };
 
+template <typename T>
+class InsertionSort : public Sorter<T>
+{
+    public:
+    InsertionSort() {};
+    ~InsertionSort() {};
+
+    void sort(std::vector<T> &arr)
+    {
+        T key;
+        for (size_t i = 1; i < arr.size(); i++)
+        {
+            key = arr[i];
+            int j = i - 1;
+            while (j >= 0 && arr[j] > key)
+            {
+                arr[j+1] = arr[j];
+                j--;
+            }
+            arr[j+1] = key;
+        }        
+    };
+};
+
+template <typename T>
+class MergeSort : public Sorter<T>
+{
+    public:
+    MergeSort() {};
+    ~MergeSort() {};
+
+    void sort(std::vector<T> &arr)
+    {
+        mergesort(arr, 0, arr.size()-1);
+    };
+
+    // 1 3 5 2 7 4 6 2 0
+    // 0 1 2 3 4 5 6 7 8
+    void mergesort(std::vector<T> &arr, int l, r)
+    {
+        if (l < r) {
+            int m = l + (r-l) / 2;
+            
+            mergesort(arr, l, m);
+            mergesort(arr, m+1, r);
+
+            merge(arr, l, m, r);
+        }
+    }
+
+    // 1 3 5 1 2 4 0 5 6 7 4 6 2 0
+    // - - - l - m - - r - - - - - 
+    // L = [1 2 4], R = [0 5 6]
+    void merge(std::vector<T> &arr, int l, int m, int r)
+    {
+        /* insert your code here*/
+    }
+};
+
 
 #endif

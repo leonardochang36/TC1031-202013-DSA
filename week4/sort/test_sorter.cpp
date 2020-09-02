@@ -46,6 +46,7 @@ int main()
     // create copies of original vector to be sorted
     vector<float> arr_1(arr_f);
     vector<float> arr_2(arr_f);
+    vector<float> arr_3(arr_f);
     
     // get a baseline using std::sort
     DECLARE_TIMING(t);
@@ -72,5 +73,14 @@ int main()
     compare_vectors(arr_f, arr_2, "Bubble sort:");
     SHOW_TIMING(t2, "BubbleSort");
     
+    // create instance of InsertionSort
+    DECLARE_TIMING(t3);
+    START_TIMING(t3);
+    InsertionSort<float> inssort;
+    inssort.sort(arr_3);
+    STOP_TIMING(t3);
+    compare_vectors(arr_f, arr_3, "InsertionSort sort:");
+    SHOW_TIMING(t3, "InsertionSort");
+
     return 0;
 }
