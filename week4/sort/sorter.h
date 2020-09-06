@@ -111,8 +111,11 @@ class MergeSort : public Sorter<T>
     void mergesort(std::vector<T> &arr, int l, int r)
     {
         if (l < r) {
+            // Same as (l+r)/2, but avoids overflow for 
+            // large l and h 
             int m = l + (r-l) / 2;
             
+            // Sort first and second halves 
             mergesort(arr, l, m);
             mergesort(arr, m+1, r);
 
