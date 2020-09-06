@@ -21,7 +21,7 @@ void print_vector(vector<T> arr, int N = 10)
 template <typename T>
 void compare_vectors(vector<T> a, vector<T> b, string message = "")
 {
-    cout << message << " ";
+    cout << endl << message << " ";
     // check if equal
     if (a == b)
         cout << "CONGRATS, your implementation is correct!" << endl;
@@ -47,6 +47,7 @@ int main()
     vector<float> arr_1(arr_f);
     vector<float> arr_2(arr_f);
     vector<float> arr_3(arr_f);
+    vector<float> arr_4(arr_f);
     
     // get a baseline using std::sort
     DECLARE_TIMING(t);
@@ -81,6 +82,15 @@ int main()
     STOP_TIMING(t3);
     compare_vectors(arr_f, arr_3, "InsertionSort sort:");
     SHOW_TIMING(t3, "InsertionSort");
+
+    // create instance of Merge
+    DECLARE_TIMING(t4);
+    START_TIMING(t4);
+    MergeSort<float> mergesort;
+    mergesort.sort(arr_4);
+    STOP_TIMING(t4);
+    compare_vectors(arr_f, arr_4, "Merge sort:");
+    SHOW_TIMING(t4, "Merge sort");
 
     return 0;
 }
