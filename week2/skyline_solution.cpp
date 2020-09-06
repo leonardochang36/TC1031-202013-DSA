@@ -1,3 +1,26 @@
+// You are handed a scenic black-and-white photo of the skyline of a city. The photo
+// is n-pixels tall and m-pixels wide, and in the photo, buildings appear as black (pixel value 0) and sky
+// background appears as white (pixel value 1). In any column, all the black pixels are below all the
+// white pixels. In this problem, you will design an efficient algorithm that finds the location of a tallest
+// building in the photo.
+//
+// The input is an n x m matrix, where the buildings are represented with 0s, and the sky is 
+// represented by 1s. The output is an integer representing the location of a tallest building. 
+// For example, for the input 5 x 6 matrix below, a tallest building has height 5 and is 
+// in location 3 (assuming we are 0-indexing). Thus the output is 3.
+//
+//     1 1 1 0 1 1 
+//     1 1 0 0 0 1 
+//     0 1 0 0 0 1 
+//     0 1 0 0 0 1 
+//     0 0 0 0 0 1 
+//
+// a) Find and implement (in C++) an algorithm that finds a tallest building in time O(m log n).
+// b) Find and implement (in C++) an algorithm that finds a tallest building in time O(m + n).
+//
+// Note: Add as a comment block in your code a brief justification of the runtime of each algorithm.
+
+
 #include <iostream>
 #include <vector>
 #include <map>
