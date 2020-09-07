@@ -128,9 +128,9 @@ class MergeSort : public Sorter<T>
     // L = [1 2 4], R = [0 5 6]
     void merge(std::vector<T> &arr, int l, int m, int r) 
     { 
-        int i, j, k; 
-        int n1 = m - l + 1; 
-        int n2 = r - m; 
+        size_t i, j, k; 
+        size_t n1 = m - l + 1; 
+        size_t n2 = r - m; 
       
         /* create temp arrays */
         T L[n1], R[n2]; 
@@ -175,5 +175,45 @@ class MergeSort : public Sorter<T>
     };
 };
 
+template <typename T>
+class Quicksort : public Sorter<T>
+{
+    public:
+    Quicksort() {};
+    ~Quicksort() {};
+
+    void sort(std::vector<T> &arr)
+    {
+        quicksort(arr, 0, arr.size() - 1);
+    };
+
+    void quicksort(std::vector<T> &arr, int low, int high)
+    {
+        if (low < high) 
+        {
+            int piv = partition(arr, low, high);
+
+            quicksort(arr, low, piv - 1);
+            quicksort(arr, piv + 1, high);
+        }
+    };
+
+    int partition(std::vector<T> &arr, int low, int high)
+    {
+        T pivot = arr[high];
+        int i = low - 1;
+
+        for (int j = low; j <= high-1; j++)
+        {
+            if (arr[j] < pivot)
+            {
+                i++;
+                Sorter<T>::swap(i, j, arr);
+            }
+        }
+        Sorter<T>::swap(i+1, high, arr);
+        return (i+1);
+    };
+};
 
 #endif
