@@ -189,31 +189,41 @@ class Quicksort : public Sorter<T>
 
     void quicksort(std::vector<T> &arr, int low, int high)
     {
-        if (low < high) 
-        {
-            int piv = partition(arr, low, high);
-
-            quicksort(arr, low, piv - 1);
-            quicksort(arr, piv + 1, high);
-        }
+        if (low < high)  
+        {  
+            /* pi is partitioning index, arr[p] is now  
+            at right place */
+            int pi = partition(arr, low, high);  
+      
+            // Separately sort elements before  
+            // partition and after partition  
+            quicksort(arr, low, pi - 1);  
+            quicksort(arr, pi + 1, high);  
+        }  
     };
 
-    int partition(std::vector<T> &arr, int low, int high)
-    {
-        T pivot = arr[high];
-        int i = low - 1;
-
-        for (int j = low; j <= high-1; j++)
-        {
-            if (arr[j] < pivot)
-            {
-                i++;
+    /* This function takes last element as pivot, places  
+    the pivot element at its correct position in sorted  
+    array, and places all smaller (smaller than pivot)  
+    to left of pivot and all greater elements to right  
+    of pivot */
+    int partition (std::vector<T> &arr, int low, int high)
+    {  
+        T pivot = arr[high]; // pivot  
+        int i = (low - 1);     // Index of smaller element  
+      
+        for (int j = low; j <= high - 1; j++)  
+        {  
+            // If current element is smaller than the pivot  
+            if (arr[j] < pivot)  
+            {  
+                i++; // increment index of smaller element
                 Sorter<T>::swap(i, j, arr);
-            }
-        }
+            }  
+        }  
         Sorter<T>::swap(i+1, high, arr);
-        return (i+1);
-    };
+        return (i + 1);  
+    }; 
 };
 
 #endif
