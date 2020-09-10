@@ -18,15 +18,6 @@ int main()
     cout << rf << endl;
 
     return 0;
-
-    const int m = 10, n = 20;
-    int B[10][20];
-    for (size_t i = 0; i < n; i++)
-    {
-        /* code */
-    }
-    
-
 }
 
 

@@ -29,6 +29,12 @@ void compare_vectors(vector<T> a, vector<T> b, string message = "")
         cout << "Ops, sorry cowboy (cowgirl), it seems that something is still missing in your implementation" << endl;
 }
 
+template <typename T>
+bool compare_lessthan(T &a, T &b)
+{
+    return a < b;
+}
+
 
 int main()
 {
@@ -61,7 +67,7 @@ int main()
     DECLARE_TIMING(t1);
     START_TIMING(t1);
     SelectionSort<float> selsort;
-    selsort.sort(arr_1);
+    selsort.sort(arr_1, &compare_lessthan);
     STOP_TIMING(t1);
     compare_vectors(arr_f, arr_1, "Selection sort");
     SHOW_TIMING(t1, "SelectionSort:");
@@ -84,6 +90,14 @@ int main()
     compare_vectors(arr_f, arr_3, "InsertionSort sort:");
     SHOW_TIMING(t3, "InsertionSort");
 
+    // create instance of Merge
+    DECLARE_TIMING(t4);
+    START_TIMING(t4);
+    MergeSort<float> mergesort;
+    mergesort.sort(arr_4);
+    STOP_TIMING(t4);
+    compare_vectors(arr_f, arr_4, "Merge sort:");
+    SHOW_TIMING(t4, "Merge sort");
 
     // create instance of Quicksort
     DECLARE_TIMING(t5);
@@ -93,14 +107,6 @@ int main()
     STOP_TIMING(t5);
     compare_vectors(arr_f, arr_5, "Quicksort:");
     SHOW_TIMING(t5, "Quicksort");
-
-    // create instance of Merge
-    DECLARE_TIMING(t4);
-    START_TIMING(t4);
-    MergeSort<float> mergesort;
-    mergesort.sort(arr_4);
-    STOP_TIMING(t4);
-    compare_vectors(arr_f, arr_4, "Merge sort:");
-    SHOW_TIMING(t4, "Merge sort");
+        
     return 0;
 }
