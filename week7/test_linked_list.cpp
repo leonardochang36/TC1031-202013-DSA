@@ -19,4 +19,6 @@ int main()
     list.get_nth(5, item);
     list.print();
     std::cout << item << std::endl;
+
+    return 0;
 }
