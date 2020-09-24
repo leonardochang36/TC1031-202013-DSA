@@ -103,7 +103,7 @@ int main()
     DECLARE_TIMING(t5);
     START_TIMING(t5);
     Quicksort<float> quicksort;
-    quicksort.sort(arr_5);
+    quicksort.sort(arr_5, &compare_lessthan);
     STOP_TIMING(t5);
     compare_vectors(arr_f, arr_5, "Quicksort:");
     SHOW_TIMING(t5, "Quicksort");
