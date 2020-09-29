@@ -28,7 +28,7 @@ public:
 template <class T>
 class LinkedList
 {
-private:
+protected:
     Node<T> *head;
 
 public:

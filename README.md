@@ -18,4 +18,5 @@ This is our repository for the examples and programming exercises.
 | [Week 4](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week4) | Sorting (Selection sort, bubblesort, insertion sort, merge sort, quicksort) |
 | [Week 5](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week5) | Functions as arguments |
 | [Week 7](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week7) | Linked Lists |
+| [Week 8](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week7) | Queues, Stacks |
 | [Misc](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/misc)  | Answering some concerns about the challenge (Act1.3) |

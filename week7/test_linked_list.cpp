@@ -1,24 +1,41 @@
 #include "linked_list.h"
 
+using namespace std;
+
 int main()
-{
-    LinkedList<int> list;
-    list.push(4);
-    list.print();
-    list.push(42);
-    list.push(3);
-    list.push(56);
-    list.push(48);
-    list.delete_item(0);    
-    list.delete_item(0);    
-    list.append(6);
-    list.append(32);
-    list.append(61);
-    list.insert_item(100, 5);
-    int item;
-    list.get_nth(5, item);
-    list.print();
-    std::cout << item << std::endl;
+{    
+    try
+    {
+        LinkedList<int> list;
+        list.push(4);
+        list.push(42);
+        list.push(3);
+        list.push(56);
+        list.push(48);
+        list.print();
+
+        list.append(92);
+        list.append(88);
+        list.print();
+
+        list.insert_item(66, 1);
+        list.print();
+
+        list.delete_item(1);
+        list.print();
+
+        for (size_t i = 0; i < list.length(); i++)
+        {
+            int item;
+            list.get_nth(i, item);
+            cout << item << ", ";
+        }
+        cout << endl;        
+    }
+    catch(const char* e)
+    {
+        std::cerr << "ERROR caught: " << e << std::endl;
+    } 
 
     return 0;
 }
