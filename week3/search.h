@@ -8,17 +8,21 @@
 template <typename T>
 class Search 
 {
-private:
-    std::vector<T> arr;
+private:    
 
 public:
-    Search();
-    ~Search();
+    Search() {};
+    ~Search() {};
 
-    void sort();
-    void fill_random(int N);
-
-    int search_sequential(T val);
+    int search_sequential(std::vector<T> arr, T val, bool (*compare)(T &a, T &b))
+    {
+        for (size_t i = 0; i < arr.size(); i++)
+        {
+            if ((*compare)(val, arr[i]))
+                return i;
+        }
+        return -1;        
+    };
 };
 
 #endif
