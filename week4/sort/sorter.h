@@ -108,12 +108,12 @@ class MergeSort : public Sorter<T>
 
     // 1 3 5 2 7 4 6 2 0
     // 0 1 2 3 4 5 6 7 8
-    void mergesort(std::vector<T> &arr, int l, int r)
+    void mergesort(std::vector<T> &arr, unsigned long l, unsigned long r)
     {
         if (l < r) {
             // Same as (l+r)/2, but avoids overflow for 
             // large l and h 
-            int m = l + (r-l) / 2;
+            unsigned long m = l + (r-l) / 2;
             
             // Sort first and second halves 
             mergesort(arr, l, m);
@@ -126,7 +126,7 @@ class MergeSort : public Sorter<T>
     // 1 3 5 1 2 4 0 5 6 7 4 6 2 0
     // - - - l - m - - r - - - - - 
     // L = [1 2 4], R = [0 5 6]
-    void merge(std::vector<T> &arr, int l, int m, int r) 
+    void merge(std::vector<T> &arr, unsigned long l, unsigned long m, unsigned long r) 
     { 
         size_t i, j, k; 
         size_t n1 = m - l + 1; 

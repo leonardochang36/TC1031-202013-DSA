@@ -63,32 +63,32 @@ int main()
     STOP_TIMING(t);
     SHOW_TIMING(t, "std::sort");
 
-    // create instance of SelectionSort
-    DECLARE_TIMING(t1);
-    START_TIMING(t1);
-    SelectionSort<float> selsort;
-    selsort.sort(arr_1, &compare_lessthan);
-    STOP_TIMING(t1);
-    compare_vectors(arr_f, arr_1, "Selection sort");
-    SHOW_TIMING(t1, "SelectionSort:");
+    // // create instance of SelectionSort
+    // DECLARE_TIMING(t1);
+    // START_TIMING(t1);
+    // SelectionSort<float> selsort;
+    // selsort.sort(arr_1, &compare_lessthan);
+    // STOP_TIMING(t1);
+    // compare_vectors(arr_f, arr_1, "Selection sort");
+    // SHOW_TIMING(t1, "SelectionSort:");
 
-    // create instance of BubbleSort
-    DECLARE_TIMING(t2);
-    START_TIMING(t2);
-    BubbleSort<float> bubsort;
-    bubsort.sort(arr_2);
-    STOP_TIMING(t2);
-    compare_vectors(arr_f, arr_2, "Bubble sort:");
-    SHOW_TIMING(t2, "BubbleSort");
+    // // create instance of BubbleSort
+    // DECLARE_TIMING(t2);
+    // START_TIMING(t2);
+    // BubbleSort<float> bubsort;
+    // bubsort.sort(arr_2);
+    // STOP_TIMING(t2);
+    // compare_vectors(arr_f, arr_2, "Bubble sort:");
+    // SHOW_TIMING(t2, "BubbleSort");
     
-    // create instance of InsertionSort
-    DECLARE_TIMING(t3);
-    START_TIMING(t3);
-    InsertionSort<float> inssort;
-    inssort.sort(arr_3);
-    STOP_TIMING(t3);
-    compare_vectors(arr_f, arr_3, "InsertionSort sort:");
-    SHOW_TIMING(t3, "InsertionSort");
+    // // create instance of InsertionSort
+    // DECLARE_TIMING(t3);
+    // START_TIMING(t3);
+    // InsertionSort<float> inssort;
+    // inssort.sort(arr_3);
+    // STOP_TIMING(t3);
+    // compare_vectors(arr_f, arr_3, "InsertionSort sort:");
+    // SHOW_TIMING(t3, "InsertionSort");
 
     // create instance of Merge
     DECLARE_TIMING(t4);
@@ -96,7 +96,7 @@ int main()
     MergeSort<float> mergesort;
     mergesort.sort(arr_4);
     STOP_TIMING(t4);
-    compare_vectors(arr_f, arr_4, "Merge sort:");
+    // compare_vectors(arr_f, arr_4, "Merge sort:");
     SHOW_TIMING(t4, "Merge sort");
 
     // create instance of Quicksort
@@ -105,7 +105,7 @@ int main()
     Quicksort<float> quicksort;
     quicksort.sort(arr_5, &compare_lessthan);
     STOP_TIMING(t5);
-    compare_vectors(arr_f, arr_5, "Quicksort:");
+    // compare_vectors(arr_f, arr_5, "Quicksort:");
     SHOW_TIMING(t5, "Quicksort");
         
     return 0;
