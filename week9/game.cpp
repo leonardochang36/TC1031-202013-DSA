@@ -55,12 +55,12 @@ int main()
     string line, val;
     getline(cin, line);
     stringstream ss(line);
-    vector<int> a;
-    vector<int> b;
+    queue<int> a;
+    stack<int> b;
     while(getline(ss, val, ' '))
     {
-        a.push_back(atoi(val.c_str()));
-        b.push_back(atoi(val.c_str()));
+        a.push(atoi(val.c_str()));
+        b.push(atoi(val.c_str()));
     }
 
     vector<int> output;
