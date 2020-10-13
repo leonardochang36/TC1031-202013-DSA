@@ -21,3 +21,4 @@ This is our repository for the examples and programming exercises.
 | [Week 8](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week7) | Queues, Stacks |
 | [Misc](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/misc)  | Answering some concerns about the challenge (Act1.3) |
 | [Challenge 1](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/ch1)  | Solution to challenge 1 |
+| [Week 9](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week9) | Queues, Stacks in C++ STL |
