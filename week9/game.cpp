@@ -96,3 +96,15 @@ int main()
 
     return 0;    
 }
+
+
+p=raiz;
+while (p != NULL)
+{ 
+    if (p->info == valor)
+        return  p;       // p contiene un apuntador al nodo encontrado
+    else
+        // moverme al siguiente node según el nodo actual sea mayor o menor al valor buscado
+        p = (p->info > valor ? p->izq : p->der); 
+}
+return NULL; // no se encontró el valor buscado, se regresa NULL
