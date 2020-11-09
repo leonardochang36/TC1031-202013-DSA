@@ -26,6 +26,6 @@ int main()
     graph.add_edge(5, 7);
     graph.add_edge(4, 7);
 
-    graph.BFS(0);
-    graph.DFS(0);
+    graph.BFS(0); // A B C D E F G H
+    graph.DFS(0); // A D G F H E C B
 }

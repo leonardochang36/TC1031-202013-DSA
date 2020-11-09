@@ -25,6 +25,13 @@ public:
     void add_to_adj(int idx) {adj.push_back(idx);};
 };
 
+// A B C D E F G H
+// 0 1 2 3 4 5 6 7
+// A: 1, 2, 3
+// B: 0
+// C: 0, 3
+
+
 template <class T>
 class Graph
 {
