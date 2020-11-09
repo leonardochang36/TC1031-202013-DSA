@@ -6,7 +6,9 @@ Tecnologico de Monterrey, campus Santa Fe.
 
 **Semester:** Fall 2020
 
-This is our repository for the examples and programming exercises.
+This is our repository for the examples and programming exercises. 
+
+Looking for the lectures, assignments and other? Please visit the course page in Canvas.
 
 ## Content
 
