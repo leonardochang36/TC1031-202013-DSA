@@ -56,19 +56,70 @@ public:
             nodes[dst].add_to_adj(src);
     };
 
+   
     void BFS(int start_vertex)
     {
-        /*
-            PUT YOUR BFS CODE HERE
-        */
+        std::vector<bool> visited(nodes.size(), false);
+
+        std::queue<int> queue;
+
+        visited[start_vertex] = true;
+        queue.push(start_vertex);
+
+        while (!queue.empty())
+        {
+            int s = queue.front();
+            
+            // Do something with the vertex
+            std::cout << nodes[s].get_val() << " ";
+
+            queue.pop();
+            for (std::vector<int>::iterator i = nodes[s].get_adj().begin();
+                 i != nodes[s].get_adj().end(); i++)
+            {
+                if (!visited[*i])
+                {
+                    queue.push(*i);
+                    visited[*i] = true;
+                }
+            }            
+        }
+        std::cout << std::endl;
     };
 
+   
     void DFS(int start_vertex)
     {
-        /*
-            PUT YOUR DFS CODE HERE
-        */
-    }
+        std::vector<bool> visited(nodes.size(), false);
+
+        std::stack<int> stack;
+        stack.push(start_vertex);
+
+        while(!stack.empty())
+        {
+            int s = stack.top();
+            stack.pop();
+
+            if (!visited[s])
+            {
+                visited[s] = true;
+                // Do something with the vertex
+                std::cout << nodes[s].get_val() << " ";
+            }
+
+            for (std::vector<int>::iterator i = nodes[s].get_adj().begin();
+                 i != nodes[s].get_adj().end(); i++)
+            {
+                if (!visited[*i])
+                {
+                    stack.push(*i);
+                }
+            }
+        } 
+        std::cout << std::endl;     
+    };
 };
+
+
 
 #endif
