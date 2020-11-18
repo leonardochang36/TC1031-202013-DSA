@@ -25,3 +25,5 @@ Looking for the lectures, assignments and other? Please visit the course page in
 | [Challenge 1](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/ch1)  | Solution to challenge 1 |
 | [Week 9](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week9) | Queues, Stacks in C++ STL |
 | [Week 11](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week11) | Binary Trees, BST, AVL |
+| [Week 14](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week14) | Graphs, BFS, DFS |
+| [Week 15](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week15) | Shortest paths in graphs|
