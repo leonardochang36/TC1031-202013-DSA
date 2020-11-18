@@ -16,7 +16,9 @@ private:
 public: 
     ~GraphVertex() {};
     GraphVertex() {};
-    GraphVertex(T _val) {val = _val;};
+    GraphVertex(T _val) {
+        val = _val;
+    };
 
     T get_val() {return val;};
     void set_val(T _val) {val = _val;};
@@ -24,13 +26,6 @@ public:
     std::vector<int> get_adj() {return adj;};
     void add_to_adj(int idx) {adj.push_back(idx);};
 };
-
-// A B C D E F G H
-// 0 1 2 3 4 5 6 7
-// A: 1, 2, 3
-// B: 0
-// C: 0, 3
-
 
 template <class T>
 class Graph
@@ -56,70 +51,80 @@ public:
             nodes[dst].add_to_adj(src);
     };
 
-   
     void BFS(int start_vertex)
     {
+        // Create vector for visited flag
         std::vector<bool> visited(nodes.size(), false);
-
+        
+        // Create a queue for BFS 
         std::queue<int> queue;
-
-        visited[start_vertex] = true;
+    
+        // Mark the current node as visited and enqueue it 
+        visited[start_vertex] = true; 
         queue.push(start_vertex);
-
-        while (!queue.empty())
-        {
-            int s = queue.front();
             
+        while(!queue.empty()) 
+        { 
+            // Dequeue a vertex from queue and print it 
+            int s = queue.front(); 
             // Do something with the vertex
-            std::cout << nodes[s].get_val() << " ";
-
-            queue.pop();
-            for (std::vector<int>::iterator i = nodes[s].get_adj().begin();
-                 i != nodes[s].get_adj().end(); i++)
-            {
-                if (!visited[*i])
-                {
-                    queue.push(*i);
-                    visited[*i] = true;
-                }
-            }            
-        }
+            std::cout << nodes[s].get_val() << " "; 
+            queue.pop(); 
+    
+            // Get all adjacent vertices of the dequeued 
+            // vertex s. If a adjacent has not been visited,  
+            // then mark it visited and enqueue it 
+            for (std::vector<int>::iterator i = nodes[s].get_adj().begin(); 
+                i != nodes[s].get_adj().end(); ++i) 
+            { 
+                if (!visited[*i]) 
+                { 
+                    visited[*i] = true; 
+                    queue.push(*i); 
+                } 
+            }
+        } 
         std::cout << std::endl;
     };
 
-   
     void DFS(int start_vertex)
     {
+        // Create vector for visited flag
         std::vector<bool> visited(nodes.size(), false);
-
+        
+        // Create a stack for DFS 
         std::stack<int> stack;
-        stack.push(start_vertex);
 
-        while(!stack.empty())
-        {
+        stack.push(start_vertex);
+    
+            
+        while(!stack.empty()) 
+        { 
+            // Dequeue a vertex from queue and print it 
             int s = stack.top();
             stack.pop();
 
             if (!visited[s])
-            {
+            {            
                 visited[s] = true;
                 // Do something with the vertex
-                std::cout << nodes[s].get_val() << " ";
+                std::cout << nodes[s].get_val() << " "; 
             }
 
-            for (std::vector<int>::iterator i = nodes[s].get_adj().begin();
-                 i != nodes[s].get_adj().end(); i++)
-            {
-                if (!visited[*i])
-                {
-                    stack.push(*i);
-                }
+            // Get all adjacent vertices of the dequeued 
+            // vertex s. If a adjacent has not been visited,  
+            // then mark it visited and enqueue it 
+            for (std::vector<int>::iterator i = nodes[s].get_adj().begin(); 
+                i != nodes[s].get_adj().end(); ++i) 
+            { 
+                if (!visited[*i]) 
+                { 
+                    stack.push(*i); 
+                } 
             }
         } 
-        std::cout << std::endl;     
+        std::cout << std::endl;
     };
 };
-
-
 
 #endif
