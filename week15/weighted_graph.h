@@ -57,11 +57,50 @@ public:
         return nodes[i].get_val();
     };
 
+    // Dijsktra algorithm implementation
     std::vector<float> shortest_path(int s)
     {
-        /*
-            INSERT YOUR CODE HERE 
-        */        
+        // create vector for distances from s to every other vertex
+        std::vector<float> dist(nodes.size(), INT_MAX);
+
+        // create vector for visited
+        std::vector<bool> visited(nodes.size(), false);
+
+        // distance to self vertex is zero
+        dist[s] = 0;
+
+        for (size_t ii = 0; ii < nodes.size(); ii++)        
+        {
+            // find the non-visited vertex with smallest distance estimation
+            int sv = -1;
+            float mind = INT_MAX;
+            for (size_t i = 0; i < nodes.size(); i++)
+            {
+                if (!visited[i] && dist[i] <= mind)
+                    sv = i, mind = dist[i];
+            }
+
+            if (sv < 0)
+                return dist;
+
+            // Get all adjacent vertices of sv
+            // and update distance estimations
+            std::vector<std::pair<int, float> >::iterator i;
+            for (i = nodes[sv].get_adj().begin(); i != nodes[sv].get_adj().end(); ++i) 
+            { 
+                // neighbor i index in nodes
+                int vi = (*i).first;
+
+                // only update non-visited vertex
+                if (visited[vi])
+                    continue;
+
+                // update distance estimation for vi    
+                dist[vi] = std::min(dist[vi], dist[sv] + (*i).second);
+            }
+            visited[sv] = true;
+        }
+        return dist;      
     };
 };
 
