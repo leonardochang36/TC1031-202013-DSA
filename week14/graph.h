@@ -37,6 +37,7 @@ private:
 public:
     ~Graph() {};
     Graph() {is_directed=false;};
+    Graph(bool _is_directed) {is_directed=_is_directed;};
 
     void add_node(T val)
     {
@@ -125,6 +126,19 @@ public:
         } 
         std::cout << std::endl;
     };
+
+    void print()
+    {
+        for (size_t i = 0; i < nodes.size(); i++)
+        {
+            std::cout << i << ": " << nodes[i].get_val() << " --> ";
+            for (size_t j = 0; j < nodes[i].get_adj().size(); j++)
+            {
+                std::cout << nodes[i].get_adj()[j] << ", ";
+            }
+            std::cout << std::endl;
+        }        
+    }
 };
 
 #endif
