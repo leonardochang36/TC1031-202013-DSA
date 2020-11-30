@@ -8,7 +8,7 @@
 #include <string>
 #include <stdio.h>
 #include "dog.h"
-#include "../week4/sort/sorter.h"
+#include "../week04/sorter.h"
 
 class Analytics
 {

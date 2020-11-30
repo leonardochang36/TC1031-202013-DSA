@@ -8,8 +8,8 @@
 #include <string>
 #include <stdio.h>
 #include "log.h"
-#include "../week4/sort/sorter.h"
-#include "../week3/search.h"
+#include "../week04/sorter.h"
+#include "../week03/search.h"
 
 class Analytics
 {

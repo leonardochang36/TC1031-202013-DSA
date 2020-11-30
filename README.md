@@ -21,7 +21,6 @@ Looking for the lectures, assignments and other? Please visit the course page in
 | [Week 5](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week05) | Functions as arguments |
 | [Week 7](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week07) | Linked Lists |
 | [Week 8](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week07) | Queues, Stacks |
-| [Misc](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/misc)  | Answering some concerns about the challenge (Act1.3) |
 | [Week 9](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week09) | Queues, Stacks in C++ STL |
 | [Week 11](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week11) | Binary Trees, BST, AVL |
 | [Week 14](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week14) | Graphs, BFS, DFS |
@@ -31,3 +30,4 @@ Looking for the lectures, assignments and other? Please visit the course page in
 | [Challenge 3](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/ch03)  | Solution to challenge 3 |
 | [Challenge 4](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/ch04)  | Solution to challenge 4 |
 | [Challenge 5](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/ch05)  | Solution to challenge 5 |
+| [Misc](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/misc)  | Answering some concerns about the challenge (Act1.3) |
