@@ -22,8 +22,12 @@ Looking for the lectures, assignments and other? Please visit the course page in
 | [Week 7](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week7) | Linked Lists |
 | [Week 8](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week7) | Queues, Stacks |
 | [Misc](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/misc)  | Answering some concerns about the challenge (Act1.3) |
-| [Challenge 1](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/ch1)  | Solution to challenge 1 |
 | [Week 9](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week9) | Queues, Stacks in C++ STL |
 | [Week 11](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week11) | Binary Trees, BST, AVL |
 | [Week 14](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week14) | Graphs, BFS, DFS |
-| [Week 15](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week15) | Shortest paths in graphs|
+| [Week 15](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/week15) | Shortest paths in graphs (Dijsktra)|
+| [Challenge 1](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/ch1)  | Solution to challenge 1 |
+| [Challenge 2](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/ch2)  | Solution to challenge 2 |
+| [Challenge 3](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/ch3)  | Solution to challenge 3 |
+| [Challenge 4](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/ch4)  | Solution to challenge 4 |
+| [Challenge 5](https://github.com/leonardochang36/TC1031-202013-DSA/tree/master/ch5)  | Solution to challenge 5 |
